@@ -1,0 +1,12 @@
+<form action="" [formGroup]='frm'>
+
+  Name : <input type="text" formControlName='name'>
+  <div *ngIf="frm.get('name').errors && frm.get('name').touched">
+    <div *ngIf="frm.get('name').errors.required">Required</div>
+    <div *ngIf="frm.get('name').errors.minlength">Length Error</div>
+  </div>
+
+  Mail : <input type="text" formControlName='email'>
+
+  <button [disabled]='!frm.valid'>Click Me</button>
+</form>

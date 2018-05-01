@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { CityComponent } from './city/city.component';
 import { FilterComponent } from './filter/filter.component';
 import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { FormsComponent } from './forms/forms.component';
     DoctorComponent,
     CityComponent,
     FilterComponent,
-    FormsComponent
+    FormsComponent,
+    ReactiveFormValidationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
