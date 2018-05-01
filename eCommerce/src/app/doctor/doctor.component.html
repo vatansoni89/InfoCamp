@@ -1,0 +1,26 @@
+<p>
+  doctor works!
+</p>
+<p>Name<input [(ngModel)] = 'name' type="text"></p>
+<p>Mobile<input [(ngModel)] = 'mobile' type="text"></p>
+<p>Specialization<input [(ngModel)] = 'specialization' type="text"></p>
+<p>Pic<input [(ngModel)] = 'pic' type="text"></p>
+
+<button (click) = 'addDoctor()'>Add Doctor</button>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Mobile</th>
+    <th>Specialization</th>
+    <th>Pic</th>
+    <th>Action</th>
+  </thead>
+  <tr *ngFor='let doc of doctors ; let i = index'>
+    <td>{{doc.name}}</td>
+    <td>{{doc.mobile}}</td>
+    <td>{{doc.specialization}}</td>
+    <td><img [src]="doc.pic" width="100" height="100" alt=""></td>
+    <td><button (click) = 'removeDoc(i)'></button></td>
+  </tr>
+</table>

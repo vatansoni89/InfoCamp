@@ -1,0 +1,30 @@
+<p>
+  e-commerce works!
+</p>
+<p>
+<label for="">Name</label> <input [(ngModel)] = 'name'>
+</p>
+<p>
+<label for="" >Pic</label> <input [(ngModel)] = 'pic'>
+</p>
+<p>
+<label for="">Cost</label><input [(ngModel)] = 'cost'>
+</p>
+<button (click) = 'addMe()'>Add me</button>
+<table border="solid">
+  <tr>
+    <th>Name</th>
+    <th>Pic</th>
+    <th>Cost</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor='let prod of products'>
+    <td>{{prod.name}}</td>
+    <td>
+      
+      <img [src]="prod.pic" width="5" height="5" alt=""></td>
+    <td>{{prod.cost}}</td>
+    <td><button>Delete</button></td>
+  </tr>
+</table>
+

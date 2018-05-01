@@ -1,0 +1,31 @@
+<p class='panel panel-primary'> 
+  city works!
+</p>
+<p class='panel panel-primary'> 
+  Name  <input [(ngModel)] = 'city.name' type="text">
+</p>
+<p class='panel panel-primary'>  
+  Pic <input [(ngModel)] = 'city.pic' type="text">
+</p>
+<p class='panel panel-primary'>  
+  Population <input [(ngModel)] = 'city.population' type="text">
+</p>
+<p class='panel panel-primary'>  
+  Mair <input [(ngModel)] = 'city.mair' type="text">
+</p>
+<button (click) = 'addCity()'>Add City</button>
+[{{cities | json}}]
+<table class='table'>
+  <thead>
+    <th>Name</th>
+    <th>Pic</th>
+    <th>Population</th>
+    <th>Mair</th>
+  </thead>
+<tr *ngFor='let x of cities;let i=index;'>
+  <td>{{x.name}}</td>
+  <td><img [src]="x.pic" alt=""></td>
+  <td>{{x.population}}</td>
+  <td>{{x.mair}}</td>
+</tr>
+</table>

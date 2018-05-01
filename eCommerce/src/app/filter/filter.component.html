@@ -1,0 +1,18 @@
+<input [(ngModel)]='filterText' >
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>State</th>
+  </thead>
+  <tbody>
+    <tr *ngFor='let p of filteredProduct'>
+      <td>{{p.name}}</td>
+      <td>{{p.age}}</td>
+      <td>{{p.city}}</td>
+      <td>{{p.state}}</td>
+    </tr>
+  </tbody>
+</table>
