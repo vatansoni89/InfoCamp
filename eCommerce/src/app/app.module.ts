@@ -8,6 +8,7 @@ import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { CityComponent } from './city/city.component';
 import { FilterComponent } from './filter/filter.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterComponent } from './filter/filter.component';
     ECommerceComponent,
     DoctorComponent,
     CityComponent,
-    FilterComponent
+    FilterComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
