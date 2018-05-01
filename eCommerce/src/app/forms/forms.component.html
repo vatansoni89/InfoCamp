@@ -1,3 +1,15 @@
 <form action="" name='frmName' #f='ngForm'>
+  <p>
+    Email <input type="text" required minlength="5" pattern="[A-Za-z]" max="20" name='inputName' ngModel #e="ngModel">
 
+  </p>
+  <button [disabled]="!f.valid" (click)='click()'> Click </button>
+
+  <div *ngIf='e.errors && e.touched'>
+    <span *ngIf='e.errors.required'>Mail req</span>
+
+    <span *ngIf='e.errors.pattern'>Only character</span>
+    <span *ngIf='e.errors.minlength'>Length mismatch</span>
+  </div>
+  <button (click)='save1()'>Submitttt</button>
 </form>
