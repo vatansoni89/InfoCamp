@@ -8,17 +8,21 @@ import { Observable } from 'rxjs/Observable';
 })
 export class Obervable1Component implements OnInit {
 
+  private score: Observable<number>;
+
   constructor() {
-    this.xyz().subscribe(
-      (res) => { console.log(res) },
-      (error) => {console.log(error)}
-    );
+    // this.xyz().subscribe(
+    //   (res) => { console.log(res) },
+    //   (error) => {console.log(error)}
+    // );
+    //To show is browser we dont need above lines.
+    this.score = this.xyz();
   }
 
   ngOnInit() {
   }
 
-  xyz() {
+  xyz(): Observable<number> {
     var obj = new Observable(
 
       observer => {
@@ -28,7 +32,7 @@ export class Obervable1Component implements OnInit {
 
         setTimeout(function () {
           observer.next(200)
-        }, 5000);
+        }, 3000);
       }
     );
 
