@@ -10,6 +10,7 @@ import { CityComponent } from './city/city.component';
 import { FilterComponent } from './filter/filter.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
+import { Obervable1Component } from './obervable1/obervable1.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormValidationComponent } from './reactive-form-validation/reac
     CityComponent,
     FilterComponent,
     FormsComponent,
-    ReactiveFormValidationComponent
+    ReactiveFormValidationComponent,
+    Obervable1Component
   ],
   imports: [
     BrowserModule,
