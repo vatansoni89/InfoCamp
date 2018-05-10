@@ -39,4 +39,12 @@ export class Obervable1Component implements OnInit {
     return obj;
   }
 
+
+
+
+
 }
+
+
+
+

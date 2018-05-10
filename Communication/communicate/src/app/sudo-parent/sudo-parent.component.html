@@ -1,0 +1,11 @@
+<div *ngFor='let f of fruitCollection'>
+  <app-child [msg]='101' [fruit] = 'f' (emitToParent)='notify($event)'> </app-child>
+
+
+<div>
+  Sudo-parent {{msgFrmChild}}
+</div>
+</div>
+
+
+
